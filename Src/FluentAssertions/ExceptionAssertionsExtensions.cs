@@ -169,7 +169,7 @@ public static class ExceptionAssertionsExtensions
         Execute.Assertion
             .ForCondition(parent.Which.ParamName == paramName)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected exception with parameter name {0}{reason}, but found {1}.", paramName, parent.Which.ParamName);
+            .FailWith(FluentAssertions.ExceptionAssertions_WithParameterName_FailMessageFormat, paramName, parent.Which.ParamName);
 
         return parent;
     }

@@ -344,7 +344,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(valueWithinBounds)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to be within {0} from {1}{reason}, but found {2}.",
+            .FailWith(FluentAssertions.NumericAssertions_FailIfValueOutsideBounds_FailMessageFormat,
                 delta, nearbyValue, actualValue);
     }
 
@@ -685,7 +685,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(valueOutsideBounds)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:value} to be within {0} from {1}{reason}, but found {2}.",
+            .FailWith(FluentAssertions.NumericAssertions_FailIfValueInsideBounds_FailMessageFormat,
                 delta, distantValue, actualValue);
     }
 
@@ -720,7 +720,7 @@ public static class NumericAssertionsExtensions
         bool success = Execute.Assertion
             .ForCondition(parent.Subject is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was <null>.", expectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfFloat_BeApproximatelyWhenValueIsNull_FailMessageFormat, expectedValue,
                 precision);
 
         if (success)
@@ -765,7 +765,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(expectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was {2}.", expectedValue, precision,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfFloat_BeApproximately_FailMessageFormat, expectedValue, precision,
                 parent.Subject);
 
         if (succeeded)
@@ -854,7 +854,7 @@ public static class NumericAssertionsExtensions
         bool success = Execute.Assertion
             .ForCondition(parent.Subject is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was <null>.", expectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDouble_BeApproximatelyWhenValueIsNull_FailMessageFormat, expectedValue,
                 precision);
 
         if (success)
@@ -899,7 +899,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(expectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was {2}.", expectedValue, precision,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDouble_BeApproximately_FailMessageFormat, expectedValue, precision,
                 parent.Subject);
 
         if (succeeded)
@@ -989,7 +989,7 @@ public static class NumericAssertionsExtensions
         bool success = Execute.Assertion
             .ForCondition(parent.Subject is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was <null>.", expectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDecimal_BeApproximatelyWhenValueIsNull_FailMessageFormat, expectedValue,
                 precision);
 
         if (success)
@@ -1035,7 +1035,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(expectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {0} +/- {1}{reason}, but it was {2}.", expectedValue, precision,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDecimal_BeApproximately_FailMessageFormat, expectedValue, precision,
                 parent.Subject);
 
         if (succeeded)
@@ -1088,7 +1088,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(differenceWithinPrecision)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to approximate {1} +/- {2}{reason}, but {0} differed by {3}.",
+            .FailWith(FluentAssertions.NumericAssertionsOfT_FailIfDifferenceOutsidePrecision_FailMessageFormat,
                 parent.Subject, expectedValue, precision, actualDifference);
     }
 
@@ -1162,7 +1162,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(parent.Subject is not null && unexpectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to not approximate {0} +/- {1}{reason}, but it was {2}.", unexpectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfFloat_NotBeApproximately_FailMessageFormat, unexpectedValue,
                 precision, parent.Subject);
 
         if (succeeded)
@@ -1292,7 +1292,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(parent.Subject is not null && unexpectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to not approximate {0} +/- {1}{reason}, but it was {2}.", unexpectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDouble_NotBeApproximately_FailMessageFormat, unexpectedValue,
                 precision, parent.Subject);
 
         if (succeeded)
@@ -1422,7 +1422,7 @@ public static class NumericAssertionsExtensions
         bool succeeded = Execute.Assertion
             .ForCondition(parent.Subject is not null && unexpectedValue is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to not approximate {0} +/- {1}{reason}, but it was {2}.", unexpectedValue,
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDecimal_NotBeApproximately_FailMessageFormat, unexpectedValue,
                 precision, parent.Subject);
 
         if (succeeded)
@@ -1475,7 +1475,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(differenceOutsidePrecision)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to not approximate {1} +/- {2}{reason}, but {0} only differed by {3}.",
+            .FailWith(FluentAssertions.NumericAssertions_FailIfDifferenceWithinPrecision_FailMessageFormat,
                 parent.Subject, unexpectedValue, precision, actualDifference);
     }
 
@@ -1502,7 +1502,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(float.IsNaN(actualValue))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to be NaN{reason}, but found {0}.", actualValue);
+            .FailWith(FluentAssertions.NumericAssertionsOfFloat_BeNaN_FailMessageFormat, actualValue);
 
         return new AndConstraint<NumericAssertions<float>>(parent);
     }
@@ -1526,7 +1526,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(double.IsNaN(actualValue))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to be NaN{reason}, but found {0}.", actualValue);
+            .FailWith(FluentAssertions.NumericAssertionsOfDouble_BeNaN_FailMessageFormat, actualValue);
 
         return new AndConstraint<NumericAssertions<double>>(parent);
     }
@@ -1550,7 +1550,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(actualValue is { } value && float.IsNaN(value))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to be NaN{reason}, but found {0}.", actualValue);
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfFloat_BeNaN_FailMessageFormat, actualValue);
 
         return new AndConstraint<NullableNumericAssertions<float>>(parent);
     }
@@ -1574,7 +1574,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(actualValue is { } value && double.IsNaN(value))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:value} to be NaN{reason}, but found {0}.", actualValue);
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDouble_BeNaN_FailMessageFormat, actualValue);
 
         return new AndConstraint<NullableNumericAssertions<double>>(parent);
     }
@@ -1602,7 +1602,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(!float.IsNaN(actualValue))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:value} to be NaN{reason}.");
+            .FailWith(FluentAssertions.NumericAssertionsOfFloat_NotBeNaN_FailMessageFormat);
 
         return new AndConstraint<NumericAssertions<float>>(parent);
     }
@@ -1626,7 +1626,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(!double.IsNaN(actualValue))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:value} to be NaN{reason}.");
+            .FailWith(FluentAssertions.NumericAssertionsOfDouble_NotBeNaN_FailMessageFormat);
 
         return new AndConstraint<NumericAssertions<double>>(parent);
     }
@@ -1651,7 +1651,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(!actualValueIsNaN)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:value} to be NaN{reason}.");
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfFloat_NotBeNaN_FailMessageFormat);
 
         return new AndConstraint<NullableNumericAssertions<float>>(parent);
     }
@@ -1676,7 +1676,7 @@ public static class NumericAssertionsExtensions
         Execute.Assertion
             .ForCondition(!actualValueIsNaN)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:value} to be NaN{reason}.");
+            .FailWith(FluentAssertions.NullableNumericAssertionsOfDouble_NotBeNaN_FailMessageFormat);
 
         return new AndConstraint<NullableNumericAssertions<double>>(parent);
     }
@@ -1686,6 +1686,7 @@ public static class NumericAssertionsExtensions
     private static long GetMinValue(long value, ulong delta)
     {
         long minValue;
+
         if (delta <= (ulong.MaxValue / 2))
         {
             minValue = value - (long)delta;
@@ -1710,6 +1711,7 @@ public static class NumericAssertionsExtensions
     private static long GetMaxValue(long value, ulong delta)
     {
         long maxValue;
+
         if (delta <= (ulong.MaxValue / 2))
         {
             maxValue = value + (long)delta;

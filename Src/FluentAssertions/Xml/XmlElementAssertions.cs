@@ -40,7 +40,7 @@ public class XmlElementAssertions : XmlNodeAssertions<XmlElement, XmlElementAsse
             .ForCondition(Subject.InnerText == expected)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have value {0}{reason}, but found {1}.",
+                FluentAssertions.XmlElementAssertions_HaveInnerText_FailMessageFormat,
                 expected, Subject.InnerText);
 
         return new AndConstraint<XmlElementAssertions>(this);
@@ -97,8 +97,7 @@ public class XmlElementAssertions : XmlNodeAssertions<XmlElement, XmlElementAsse
             .ForCondition(attribute is not null)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have attribute {0}"
-                + " with value {1}{reason}, but found no such attribute in {2}",
+                FluentAssertions.XmlElementAssertions_HaveAttributeWithNamespace_AttributeIsNull_FailMessageFormat,
                 expectedFormattedName, expectedValue, Subject);
 
         if (success)
@@ -107,7 +106,7 @@ public class XmlElementAssertions : XmlNodeAssertions<XmlElement, XmlElementAsse
                 .ForCondition(attribute!.Value == expectedValue)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected attribute {0} in {context:subject} to have value {1}{reason}, but found {2}.",
+                    FluentAssertions.XmlElementAssertions_HaveAttributeWithNamespace_AttributeHaveIncorrectValue_FailMessageFormat,
                     expectedFormattedName, expectedValue, attribute.Value);
         }
 
@@ -163,7 +162,7 @@ public class XmlElementAssertions : XmlNodeAssertions<XmlElement, XmlElementAsse
             .ForCondition(element is not null)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have child element {0}{reason}, but no such child element was found.",
+                FluentAssertions.XmlElementAssertions_HaveElementWithNamespace_FailMessageFormat,
                 expectedFormattedName.EscapePlaceholders());
 
         return new AndWhichConstraint<XmlElementAssertions, XmlElement>(this, element);

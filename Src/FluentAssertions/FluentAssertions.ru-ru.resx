@@ -1,0 +1,98 @@
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XmlElementAssertions_HaveInnerText_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь значение {0}{reason}, но было найдено {1}.</value>
+  </data>
+  <data name="XmlElementAssertions_HaveAttributeWithNamespace_AttributeIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь атрибут {0} со значением {1}{reason}, но такой атрибут в {2} не был найден</value>
+  </data>
+  <data name="XmlElementAssertions_HaveAttributeWithNamespace_AttributeHaveIncorrectValue_FailMessageFormat" xml:space="preserve">
+    <value>Ожидаемый атрибут {0} в {context:subject} должен иметь значение {1}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="XmlElementAssertions_HaveElementWithNamespace_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь дочерний элемент {0}{reason}, но такой дочерний элемент не был найден.</value>
+  </data>
+  <data name="ObjectAssertions_BeDataContractSerializable_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {0} будет сериализован{reason}, но сериализация завершилась с ошибкой:</value>
+  </data>
+  <data name="ObjectAssertions_BeXmlSerializable_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {0} будет сериализован{reason}, но сериализация завершилась с ошибкой:</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDouble_NotBeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не будет NaN{reason}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfFloat_NotBeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не будет NaN{reason}.</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_NotBeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не будет NaN{reason}.</value>
+  </data>
+  <data name="NumericAssertionsOfFloat_NotBeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не будет NaN{reason}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDouble_BeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет NaN{reason}, но было найдено {0}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfFloat_BeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет NaN{reason}, но было найдено {0}.</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_BeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет NaN{reason}, но было найдено {0}.</value>
+  </data>
+  <data name="NumericAssertionsOfFloat_BeNaN_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет NaN{reason}, но было найдено {0}.</value>
+  </data>
+  <data name="NumericAssertions_FailIfDifferenceWithinPrecision_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не приближен к {1} +/- {2}{reason}, но {0} отличается только от {3}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDecimal_NotBeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDouble_NotBeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfFloat_NotBeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NumericAssertionsOfT_FailIfDifferenceOutsidePrecision_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {1} +/- {2}{reason}, но {0} отличается на {3}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDecimal_BeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDouble_BeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfFloat_BeApproximately_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение {2}.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDecimal_BeApproximatelyWhenValueIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение &lt;null&gt;.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfDouble_BeApproximatelyWhenValueIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение &lt;null&gt;.</value>
+  </data>
+  <data name="NullableNumericAssertionsOfFloat_BeApproximatelyWhenValueIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} будет приближен к {0} +/- {1}{reason}, но имеет значение &lt;null&gt;.</value>
+  </data>
+  <data name="NumericAssertions_FailIfValueInsideBounds_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} не находится в пределах {0} до {1}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="NumericAssertions_FailIfValueOutsideBounds_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:value} находится в пределах {0} до {1}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="ExceptionAssertions_WithParameterName_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось исключение с именем параметра {0}{reason}, но было найдено {1}.</value>
+  </data>
+</root>

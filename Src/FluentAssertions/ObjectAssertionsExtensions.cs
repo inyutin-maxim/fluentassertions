@@ -67,7 +67,7 @@ public static class ObjectAssertionsExtensions
         {
             Execute.Assertion
                 .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:"
+                .FailWith(FluentAssertions.ObjectAssertions_BeDataContractSerializable_FailMessageFormat
                     + Environment.NewLine + Environment.NewLine + "{1}.",
                     assertions.Subject,
                     exc.Message);
@@ -111,7 +111,7 @@ public static class ObjectAssertionsExtensions
         {
             Execute.Assertion
                 .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {0} to be serializable{reason}, but serialization failed with:"
+                .FailWith(FluentAssertions.ObjectAssertions_BeXmlSerializable_FailMessageFormat
                     + Environment.NewLine + Environment.NewLine + "{1}.",
                     assertions.Subject,
                     exc.Message);
