@@ -95,4 +95,7 @@
   <data name="ExceptionAssertions_WithParameterName_FailMessageFormat" xml:space="preserve">
     <value>Ожидалось исключение с именем параметра {0}{reason}, но было найдено {1}.</value>
   </data>
+  <data name="OccurrenceConstraint_ExceptionMessage" xml:space="preserve">
+    <value>Ожидаемое значение не может быть отрицательным.</value>
+  </data>
 </root>

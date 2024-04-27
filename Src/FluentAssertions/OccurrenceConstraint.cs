@@ -10,7 +10,7 @@ public abstract class OccurrenceConstraint
     {
         if (expectedCount < 0)
         {
-            throw new ArgumentOutOfRangeException(nameof(expectedCount), "Expected count cannot be negative.");
+            throw new ArgumentOutOfRangeException(nameof(expectedCount), FluentAssertions.OccurrenceConstraint_ExceptionMessage);
         }
 
         ExpectedCount = expectedCount;

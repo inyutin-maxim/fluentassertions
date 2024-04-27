@@ -102,4 +102,7 @@
   <data name="ExceptionAssertions_WithParameterName_FailMessageFormat" xml:space="preserve">
     <value>Expected exception with parameter name {0}{reason}, but found {1}.</value>
   </data>
+  <data name="OccurrenceConstraint_ExceptionMessage" xml:space="preserve">
+    <value>Expected count cannot be negative.</value>
+  </data>
 </root>

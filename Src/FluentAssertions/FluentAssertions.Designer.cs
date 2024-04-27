@@ -217,5 +217,11 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("ExceptionAssertions_WithParameterName_FailMessageFormat", resourceCulture);
             }
         }
+        
+        internal static string OccurrenceConstraint_ExceptionMessage {
+            get {
+                return ResourceManager.GetString("OccurrenceConstraint_ExceptionMessage", resourceCulture);
+            }
+        }
     }
 }
