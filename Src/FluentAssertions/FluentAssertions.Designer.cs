@@ -367,5 +367,111 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat", resourceCulture);
             }
         }
+        
+        internal static string XDocumentAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_GuardMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveRoot_InvalidOperationException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveRoot_InvalidOperationException_ExceptionMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_ForElement_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_ForElement_GuardMessageFo" +
+                        "rmat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveRoot_RootIsNullAndNameIsNotEqualExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveRoot_RootIsNullAndNameIsNotEqualExpected_FailMessageForma" +
+                        "t", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_StringExpected_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_StringExpected_GuardMe" +
+                        "ssageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_OccurrenceConstraint_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_OccurrenceConstraint_G" +
+                        "uardMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_XName_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_XName_GuardMessageForm" +
+                        "at", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_InvalidOperationException_XName_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_InvalidOperationException_XName_ExceptionMessageF" +
+                        "ormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_SubjectRootIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_SubjectRootIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElement_ElementIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElement_ElementIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElementForEnumerableOfXElement_GuardThrowIfArgumentIsNull_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElementForEnumerableOfXElement_GuardThrowIfArgumentIsNull" +
+                        "_GuardMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElementForEnumerableOfXElement_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElementForEnumerableOfXElement_SubjectIsNull_FailMessageF" +
+                        "ormat", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElementForEnumerableOfXElement_RootIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElementForEnumerableOfXElement_RootIsNull_FailMessageForm" +
+                        "at", resourceCulture);
+            }
+        }
+        
+        internal static string XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailM" +
+                        "essageFormat", resourceCulture);
+            }
+        }
     }
 }

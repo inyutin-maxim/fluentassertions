@@ -42,7 +42,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         Execute.Assertion
             .ForCondition(Equals(Subject, expected))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:subject} to be {0}{reason}, but found {1}.", expected, Subject);
+            .FailWith(FluentAssertions.XDocumentAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat, expected, Subject);
 
         return new AndConstraint<XDocumentAssertions>(this);
     }
@@ -64,7 +64,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         Execute.Assertion
             .BecauseOf(because, becauseArgs)
             .ForCondition(!Equals(Subject, unexpected))
-            .FailWith("Did not expect {context:subject} to be {0}{reason}.", unexpected);
+            .FailWith(FluentAssertions.XDocumentAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat, unexpected);
 
         return new AndConstraint<XDocumentAssertions>(this);
     }
@@ -135,7 +135,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has a root element if the expected name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_GuardMessageFormat);
 
         return HaveRoot(XNamespace.None + expected, because, becauseArgs);
     }
@@ -159,11 +159,11 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         if (Subject is null)
         {
             throw new InvalidOperationException(
-                "Cannot assert the document has a root element if the document itself is <null>.");
+                FluentAssertions.XDocumentAssertions_HaveRoot_InvalidOperationException_ExceptionMessageFormat);
         }
 
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has a root element if the expected name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_ForElement_GuardMessageFormat);
 
         XElement root = Subject.Root;
 
@@ -171,7 +171,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
             .ForCondition(root is not null && root.Name == expected)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have root element {0}{reason}, but found {1}.",
+                FluentAssertions.XDocumentAssertions_HaveRoot_RootIsNullAndNameIsNotEqualExpected_FailMessageFormat,
                 expected.ToString(), Subject);
 
         return new AndWhichConstraint<XDocumentAssertions, XElement>(this, root);
@@ -196,7 +196,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has an element if the expected name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_StringExpected_GuardMessageFormat);
 
         return HaveElement(XNamespace.None + expected, because, becauseArgs);
     }
@@ -223,7 +223,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         OccurrenceConstraint occurrenceConstraint, string because = "", params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has an element if the expected name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_OccurrenceConstraint_GuardMessageFormat);
 
         return HaveElement(XNamespace.None + expected, occurrenceConstraint, because, becauseArgs);
     }
@@ -248,17 +248,17 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
     {
         if (Subject is null)
         {
-            throw new InvalidOperationException("Cannot assert the document has an element if the document itself is <null>.");
+            throw new InvalidOperationException(FluentAssertions.XDocumentAssertions_HaveElement_InvalidOperationException_XName_ExceptionMessageFormat);
         }
 
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has an element if the expected name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_XName_GuardMessageFormat);
 
         bool success = Execute.Assertion
             .ForCondition(Subject.Root is not null)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have root element with child {0}{reason}, but it has no root element.",
+                FluentAssertions.XDocumentAssertions_HaveElement_SubjectRootIsNull_FailMessageFormat,
                 expected.ToString());
 
         XElement xElement = null;
@@ -271,7 +271,7 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
                 .ForCondition(xElement is not null)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} to have root element with child {0}{reason}, but no such child element was found.",
+                    FluentAssertions.XDocumentAssertions_HaveElement_ElementIsNull_FailMessageFormat,
                     expected.ToString());
         }
 
@@ -301,12 +301,13 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the document has an element count if the element name is <null>.");
+            FluentAssertions.XDocumentAssertions_HaveElementForEnumerableOfXElement_GuardThrowIfArgumentIsNull_GuardMessageFormat);
+
 
         bool success = Execute.Assertion
             .ForCondition(Subject is not null)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Cannot assert the count if the document itself is <null>.");
+            .FailWith(FluentAssertions.XDocumentAssertions_HaveElementForEnumerableOfXElement_SubjectIsNull_FailMessageFormat);
 
         IEnumerable<XElement> xElements = [];
 
@@ -314,11 +315,12 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
         {
             var root = Subject!.Root;
 
+
             success = Execute.Assertion
                 .ForCondition(root is not null)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} to have root element containing a child {0}{reason}, but it has no root element.",
+                    FluentAssertions.XDocumentAssertions_HaveElementForEnumerableOfXElement_RootIsNull_FailMessageFormat,
                     expected.ToString());
 
             if (success)
@@ -330,9 +332,8 @@ public class XDocumentAssertions : ReferenceTypeAssertions<XDocument, XDocumentA
                     .ForConstraint(occurrenceConstraint, actual)
                     .BecauseOf(because, becauseArgs)
                     .FailWith(
-                        "Expected {context:subject} to have a root element containing a child {0} " +
-                        $"{{expectedOccurrence}}{{reason}}, but found it {actual.Times()}.",
-                        expected.ToString());
+                        FluentAssertions.XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat,
+                        expected.ToString(), actual.Times());
             }
         }
 

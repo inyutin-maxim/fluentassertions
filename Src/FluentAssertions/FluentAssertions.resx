@@ -174,4 +174,52 @@
   <data name="AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat" xml:space="preserve">
     <value>More than one object found.  FluentAssertions cannot determine which object is meant.  Found objects:{0}{1}</value>
   </data>
+  <data name="XDocumentAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to be {0}{reason}, but found {1}.</value>
+  </data>
+  <data name="XDocumentAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat" xml:space="preserve">
+    <value>Did not expect {context:subject} to be {0}{reason}.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has a root element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_InvalidOperationException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has a root element if the document itself is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_ForElement_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has a root element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_RootIsNullAndNameIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have root element {0}{reason}, but found {1}.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_StringExpected_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has an element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_OccurrenceConstraint_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has an element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_XName_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has an element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_InvalidOperationException_XName_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has an element if the document itself is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_SubjectRootIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have root element with child {0}{reason}, but it has no root element.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_ElementIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have root element with child {0}{reason}, but no such child element was found.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_GuardThrowIfArgumentIsNull_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the document has an element count if the element name is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Cannot assert the count if the document itself is &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_RootIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have root element containing a child {0}{reason}, but it has no root element.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have a root element containing a child {0} {expectedOccurrence}{reason}, but found it {1}.</value>
+  </data>
 </root>

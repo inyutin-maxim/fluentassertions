@@ -167,4 +167,52 @@
   <data name="AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat" xml:space="preserve">
     <value>Найдено более одного объекта. FluentAssertions не может определить, какой объект имеется в виду. Найдены объекты:{0}{1}</value>
   </data>
+  <data name="XDocumentAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет {0}{reason}, но было найдено {1}.</value>
+  </data>
+  <data name="XDocumentAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} не будет {0}{reason}.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ имеет корневой элемент, если ожидаемое имя &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_InvalidOperationException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ имеет корневой элемент, если сам документ &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_GuardThrowIfArgumentIsNull_ForElement_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ имеет корневой элемент, если ожидаемое имя &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveRoot_RootIsNullAndNameIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь корневой элемент {0}{reason}, но было найдено {1}.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_StringExpected_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ содержит элемент, если ожидаемое имя &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_OccurrenceConstraint_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ содержит элемент, если ожидаемое имя &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_GuardThrowIfArgumentIsNull_XName_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ содержит элемент, если ожидаемое имя &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_InvalidOperationException_XName_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ имеет элемент, если сам документ &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_SubjectRootIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} имеет корневой элемент с дочерним элементом {0}{reason}, но у него нет корневого элемента.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElement_ElementIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} имеет корневой элемент с дочерним элементом {0}{reason}, но такой дочерний элемент не был найден.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_GuardThrowIfArgumentIsNull_GuardMessageFormat" xml:space="preserve">
+    <value>Невозможно утверждать, что документ имеет количество элементов, если имя элемента &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Невозможно утвердить счетчик, если сам документ &lt;null&gt;.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_RootIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь корневой элемент, содержащий дочерний элемент {0}{reason}, но у него нет корневого элемента.</value>
+  </data>
+  <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет иметь корневой элемент, содержащий дочерний элемент {0} {expectedOccurrence}{reason}, но было найдено {1}.</value>
+  </data>
 </root>
