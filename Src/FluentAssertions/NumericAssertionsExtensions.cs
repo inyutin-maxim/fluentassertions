@@ -801,7 +801,7 @@ public static class NumericAssertionsExtensions
     {
         if (float.IsNaN(expectedValue))
         {
-            throw new ArgumentException("Cannot determine approximation of a float to NaN", nameof(expectedValue));
+            throw new ArgumentException(FluentAssertions.NumericAssertionsOfFloat_BeApproximately_ArgumentException_ExceptionMessageFormat, nameof(expectedValue));
         }
 
         Guard.ThrowIfArgumentIsNegative(precision);
@@ -935,7 +935,7 @@ public static class NumericAssertionsExtensions
     {
         if (double.IsNaN(expectedValue))
         {
-            throw new ArgumentException("Cannot determine approximation of a double to NaN", nameof(expectedValue));
+            throw new ArgumentException(FluentAssertions.NumericAssertionsOfDouble_BeApproximately_ArgumentException_ExceptionMessageFormat, nameof(expectedValue));
         }
 
         Guard.ThrowIfArgumentIsNegative(precision);
@@ -1198,7 +1198,7 @@ public static class NumericAssertionsExtensions
     {
         if (float.IsNaN(unexpectedValue))
         {
-            throw new ArgumentException("Cannot determine approximation of a float to NaN", nameof(unexpectedValue));
+            throw new ArgumentException(FluentAssertions.NumericAssertionsOfFloat_NotBeApproximately_ArgumentException_ExceptionMessageFormat, nameof(unexpectedValue));
         }
 
         Guard.ThrowIfArgumentIsNegative(precision);
@@ -1328,7 +1328,8 @@ public static class NumericAssertionsExtensions
     {
         if (double.IsNaN(unexpectedValue))
         {
-            throw new ArgumentException("Cannot determine approximation of a double to NaN", nameof(unexpectedValue));
+
+            throw new ArgumentException(FluentAssertions.NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat, nameof(unexpectedValue));
         }
 
         Guard.ThrowIfArgumentIsNegative(precision);

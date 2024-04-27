@@ -152,4 +152,16 @@
   <data name="XElementAssertions_Be_FailMessageFormat" xml:space="preserve">
     <value>Ожидалось, что {context:subject} будет {0}{reason}, но было найдено {1}.</value>
   </data>
+  <data name="NumericAssertionsOfFloat_BeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно определить приближение числа с плавающей запятой к NaN</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_BeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно определить приближение double к NaN</value>
+  </data>
+  <data name="NumericAssertionsOfFloat_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно определить приближение числа с плавающей запятой к NaN</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Невозможно определить приближение double к NaN</value>
+  </data>
 </root>

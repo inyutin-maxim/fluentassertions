@@ -333,5 +333,33 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("XElementAssertions_Be_FailMessageFormat", resourceCulture);
             }
         }
+        
+        internal static string NumericAssertionsOfFloat_BeApproximately_ArgumentException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("NumericAssertionsOfFloat_BeApproximately_ArgumentException_ExceptionMessageFormat" +
+                        "", resourceCulture);
+            }
+        }
+        
+        internal static string NumericAssertionsOfDouble_BeApproximately_ArgumentException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("NumericAssertionsOfDouble_BeApproximately_ArgumentException_ExceptionMessageForma" +
+                        "t", resourceCulture);
+            }
+        }
+        
+        internal static string NumericAssertionsOfFloat_NotBeApproximately_ArgumentException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("NumericAssertionsOfFloat_NotBeApproximately_ArgumentException_ExceptionMessageFor" +
+                        "mat", resourceCulture);
+            }
+        }
+        
+        internal static string NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFo" +
+                        "rmat", resourceCulture);
+            }
+        }
     }
 }

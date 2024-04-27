@@ -159,4 +159,16 @@
   <data name="XElementAssertions_Be_FailMessageFormat" xml:space="preserve">
     <value>Expected {context:subject} to be {0}{reason}, but found {1}.</value>
   </data>
+  <data name="NumericAssertionsOfFloat_BeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot determine approximation of a float to NaN</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_BeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot determine approximation of a double to NaN</value>
+  </data>
+  <data name="NumericAssertionsOfFloat_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot determine approximation of a float to NaN</value>
+  </data>
+  <data name="NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Cannot determine approximation of a double to NaN</value>
+  </data>
 </root>
