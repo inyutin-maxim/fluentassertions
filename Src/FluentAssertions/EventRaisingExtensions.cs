@@ -28,8 +28,7 @@ public static class EventRaisingExtensions
         {
             bool hasSender = Execute.Assertion
                 .ForCondition(@event.Parameters.Length > 0)
-                .FailWith("Expected event from sender {0}, " +
-                    $"but event {eventRecording.EventName} does not have any parameters", expectedSender);
+                .FailWith(FluentAssertions.EventRaisingExtensions_WithSender_EveryEvent_FailMessageFormat, expectedSender, eventRecording.EventName);
 
             if (hasSender)
             {
@@ -48,7 +47,7 @@ public static class EventRaisingExtensions
 
         Execute.Assertion
             .ForCondition(eventsForSender.Count > 0)
-            .FailWith("Expected sender {0}, but found {1}.",
+            .FailWith(FluentAssertions.EventRaisingExtensions_WithSender_Senders_FailMessageFormat,
                 () => expectedSender,
                 () => otherSenders.Distinct());
 
@@ -85,7 +84,7 @@ public static class EventRaisingExtensions
 
         Execute.Assertion
             .ForCondition(foundMatchingEvent)
-            .FailWith("Expected at least one event with some argument of type <{0}> that matches {1}, but found none.",
+            .FailWith(FluentAssertions.EventRaisingExtensions_WithArgs_FailMessageFormat,
                 typeof(T),
                 predicate.Body);
 
@@ -115,8 +114,10 @@ public static class EventRaisingExtensions
 
             if (predicates.Length > typedParameters.Length)
             {
+
                 throw new ArgumentException(
-                    $"Expected the event to have at least {predicates.Length} parameters of type {typeof(T)}, but only found {typedParameters.Length}.");
+                    string.Format(FluentAssertions.EventRaisingExtensions_WithArgs_EventArgumentException_ExceptionMessageFormat,
+                        predicates.Length, typeof(T), typedParameters.Length));
             }
 
             bool isMatch = hasArgumentOfRightType;
@@ -138,7 +139,7 @@ public static class EventRaisingExtensions
         {
             Execute.Assertion
                 .FailWith(
-                    "Expected at least one event with some arguments of type <{0}> that pairwise match {1}, but found none.",
+                    FluentAssertions.EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat,
                     typeof(T),
                     string.Join(" | ", predicates.Where(p => p is not null).Select(p => p.Body.ToString())));
         }

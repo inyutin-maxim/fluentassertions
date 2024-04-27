@@ -223,5 +223,35 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("OccurrenceConstraint_ExceptionMessage", resourceCulture);
             }
         }
+        
+        internal static string EventRaisingExtensions_WithSender_EveryEvent_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("EventRaisingExtensions_WithSender_EveryEvent_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string EventRaisingExtensions_WithSender_Senders_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("EventRaisingExtensions_WithSender_Senders_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string EventRaisingExtensions_WithArgs_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("EventRaisingExtensions_WithArgs_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string EventRaisingExtensions_WithArgs_EventArgumentException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("EventRaisingExtensions_WithArgs_EventArgumentException_ExceptionMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat", resourceCulture);
+            }
+        }
     }
 }

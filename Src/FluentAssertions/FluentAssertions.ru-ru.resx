@@ -93,9 +93,24 @@
     <value>Ожидалось, что {context:value} находится в пределах {0} до {1}{reason}, но было найдено {2}.</value>
   </data>
   <data name="ExceptionAssertions_WithParameterName_FailMessageFormat" xml:space="preserve">
-    <value>Ожидалось исключение с именем параметра {0}{reason}, но было найдено {1}.</value>
+    <value>Ожидалось, что исключение с именем параметра {0}{reason}, но было найдено {1}.</value>
   </data>
   <data name="OccurrenceConstraint_ExceptionMessage" xml:space="preserve">
-    <value>Ожидаемое значение не может быть отрицательным.</value>
+    <value>Ожидалось, что значение не может быть отрицательным.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithSender_EveryEvent_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что событие от отправителя будет {0}, но событие {1} не имеет параметров</value>
+  </data>
+  <data name="EventRaisingExtensions_WithSender_Senders_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что отправитель будет {0}, но был найден {1}.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что по крайней мере одно событие с аргументом типа &lt;{0}&gt;, который соответствует {1}, но не было найдено.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_EventArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что событие будет иметь как минимум {0} параметров типа {1}, но было найдено только {2}.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что по крайней мере одно событие с некоторыми аргументами типа &lt;{0}&gt;, попарно соответствующими {1}, но не было найдено ни одного.</value>
   </data>
 </root>

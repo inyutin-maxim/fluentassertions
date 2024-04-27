@@ -105,4 +105,19 @@
   <data name="OccurrenceConstraint_ExceptionMessage" xml:space="preserve">
     <value>Expected count cannot be negative.</value>
   </data>
+  <data name="EventRaisingExtensions_WithSender_EveryEvent_FailMessageFormat" xml:space="preserve">
+    <value>Expected event from sender {0}, but event {1} does not have any parameters</value>
+  </data>
+  <data name="EventRaisingExtensions_WithSender_Senders_FailMessageFormat" xml:space="preserve">
+    <value>Expected sender {0}, but found {1}.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_FailMessageFormat" xml:space="preserve">
+    <value>Expected at least one event with some argument of type &lt;{0}&gt; that matches {1}, but found none.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_EventArgumentException_ExceptionMessageFormat" xml:space="preserve">
+    <value>Expected the event to have at least {0} parameters of type {1}, but only found {2}.</value>
+  </data>
+  <data name="EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat" xml:space="preserve">
+    <value>Expected at least one event with some arguments of type &lt;{0}&gt; that pairwise match {1}, but found none.</value>
+  </data>
 </root>
