@@ -120,4 +120,43 @@
   <data name="EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat" xml:space="preserve">
     <value>Expected at least one event with some arguments of type &lt;{0}&gt; that pairwise match {1}, but found none.</value>
   </data>
+  <data name="XElementAssertions_HaveValue_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected the element to have value {0}{reason}, but {context:member} is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} '{0}' to have value {1}{reason}, but found {2}.</value>
+  </data>
+  <data name="XElementAssertions_HaveAttribute_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected attribute {0} in element to have value {1}{reason}, but {context:member} is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_HaveAttribute_AttributeIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have attribute {0} with value {1}{reason}, but found no such attribute in {2}</value>
+  </data>
+  <data name="XElementAssertions_HaveAttribute_AttributeIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected attribute {0} in {context:subject} to have value {1}{reason}, but found {2}.</value>
+  </data>
+  <data name="XElementAssertions_HaveElement_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected the element to have child element {0}{reason}, but {context:member} is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_HaveElement_ElementIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have child element {0}{reason}, but no such child element was found.</value>
+  </data>
+  <data name="XElementAssertions_HaveElement_GuardExpectedValue_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the element has an element count if the element name is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_HaveElementForEnumerable_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have an element with count of {0}{reason}, but the element itself is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_HaveElementForEnumerable_OccurrenceConstraint_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to have an element {0} {expectedOccurrence}{reason}, but found it {1}.</value>
+  </data>
+  <data name="XElementAssertions_HaveElementForEnumerable_GuardExpectedValue_GuardMessageFormat" xml:space="preserve">
+    <value>Cannot assert the element has an element if the expected name is &lt;null&gt;.</value>
+  </data>
+  <data name="XElementAssertions_NotBe_FailMessageFormat" xml:space="preserve">
+    <value>Did not expect {context:subject} to be {0}{reason}.</value>
+  </data>
+  <data name="XElementAssertions_Be_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to be {0}{reason}, but found {1}.</value>
+  </data>
 </root>

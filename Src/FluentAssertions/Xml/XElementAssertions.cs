@@ -43,7 +43,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
         Execute.Assertion
             .ForCondition(XNode.DeepEquals(Subject, expected))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context:subject} to be {0}{reason}, but found {1}.", expected, Subject);
+            .FailWith(FluentAssertions.XElementAssertions_Be_FailMessageFormat, expected, Subject);
 
         return new AndConstraint<XElementAssertions>(this);
     }
@@ -66,7 +66,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
         Execute.Assertion
             .ForCondition((Subject is null && unexpected is not null) || !XNode.DeepEquals(Subject, unexpected))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context:subject} to be {0}{reason}.", unexpected);
+            .FailWith(FluentAssertions.XElementAssertions_NotBe_FailMessageFormat, unexpected);
 
         return new AndConstraint<XElementAssertions>(this);
     }
@@ -139,7 +139,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
         bool success = Execute.Assertion
             .BecauseOf(because, becauseArgs)
             .ForCondition(Subject is not null)
-            .FailWith("Expected the element to have value {0}{reason}, but {context:member} is <null>.", expected);
+            .FailWith(FluentAssertions.XElementAssertions_HaveValue_SubjectIsNull_FailMessageFormat, expected);
 
         if (success)
         {
@@ -147,7 +147,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
                 .ForCondition(Subject!.Value == expected)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} '{0}' to have value {1}{reason}, but found {2}.",
+                    FluentAssertions.XElementAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat,
                     Subject.Name, expected, Subject.Value);
         }
 
@@ -202,7 +202,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
             .BecauseOf(because, becauseArgs)
             .ForCondition(Subject is not null)
             .FailWith(
-                "Expected attribute {0} in element to have value {1}{reason}, but {context:member} is <null>.",
+                FluentAssertions.XElementAssertions_HaveAttribute_SubjectIsNull_FailMessageFormat,
                 expectedText, expectedValue);
 
         if (success)
@@ -213,8 +213,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
                 .ForCondition(attribute is not null)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} to have attribute {0} with value {1}{reason},"
-                    + " but found no such attribute in {2}",
+                    FluentAssertions.XElementAssertions_HaveAttribute_AttributeIsNull_FailMessageFormat,
                     expectedText, expectedValue, Subject);
 
             if (success)
@@ -223,7 +222,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
                     .ForCondition(attribute!.Value == expectedValue)
                     .BecauseOf(because, becauseArgs)
                     .FailWith(
-                        "Expected attribute {0} in {context:subject} to have value {1}{reason}, but found {2}.",
+                        FluentAssertions.XElementAssertions_HaveAttribute_AttributeIsNotEqualExpected_FailMessageFormat,
                         expectedText, expectedValue, attribute.Value);
             }
         }
@@ -275,7 +274,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
             .BecauseOf(because, becauseArgs)
             .ForCondition(Subject is not null)
             .FailWith(
-                "Expected the element to have child element {0}{reason}, but {context:member} is <null>.",
+                FluentAssertions.XElementAssertions_HaveElement_SubjectIsNull_FailMessageFormat,
                 expected.ToString().EscapePlaceholders());
 
         XElement xElement = null;
@@ -288,7 +287,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
                 .ForCondition(xElement is not null)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} to have child element {0}{reason}, but no such child element was found.",
+                    FluentAssertions.XElementAssertions_HaveElement_ElementIsNull_FailMessageFormat,
                     expected.ToString().EscapePlaceholders());
         }
 
@@ -318,13 +317,13 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
         params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the element has an element count if the element name is <null>.");
+            FluentAssertions.XElementAssertions_HaveElement_GuardExpectedValue_GuardMessageFormat);
 
         bool success = Execute.Assertion
             .ForCondition(Subject is not null)
             .BecauseOf(because, becauseArgs)
             .FailWith(
-                "Expected {context:subject} to have an element with count of {0}{reason}, but the element itself is <null>.",
+                FluentAssertions.XElementAssertions_HaveElementForEnumerable_SubjectIsNull_FailMessageFormat,
                 expected.ToString());
 
         IEnumerable<XElement> xElements = [];
@@ -338,9 +337,8 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
                 .ForConstraint(occurrenceConstraint, actual)
                 .BecauseOf(because, becauseArgs)
                 .FailWith(
-                    "Expected {context:subject} to have an element {0} {expectedOccurrence}" +
-                    $"{{reason}}, but found it {actual.Times()}.",
-                    expected.ToString());
+                    FluentAssertions.XElementAssertions_HaveElementForEnumerable_OccurrenceConstraint_FailMessageFormat,
+                    expected.ToString(), actual.Times());
         }
 
         return new AndWhichConstraint<XElementAssertions, IEnumerable<XElement>>(this, xElements);
@@ -368,7 +366,7 @@ public class XElementAssertions : ReferenceTypeAssertions<XElement, XElementAsse
         OccurrenceConstraint occurrenceConstraint, string because = "", params object[] becauseArgs)
     {
         Guard.ThrowIfArgumentIsNull(expected, nameof(expected),
-            "Cannot assert the element has an element if the expected name is <null>.");
+            FluentAssertions.XElementAssertions_HaveElementForEnumerable_GuardExpectedValue_GuardMessageFormat);
 
         return HaveElement(XNamespace.None + expected, occurrenceConstraint, because, becauseArgs);
     }

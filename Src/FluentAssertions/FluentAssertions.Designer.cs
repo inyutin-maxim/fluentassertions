@@ -253,5 +253,85 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("EventRaisingExtensions_WithArgs_FoundMatchingEvent_FailMessageFormat", resourceCulture);
             }
         }
+        
+        internal static string XElementAssertions_HaveValue_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveValue_SubjectIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveAttribute_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveAttribute_SubjectIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveAttribute_AttributeIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveAttribute_AttributeIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveAttribute_AttributeIsNotEqualExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveAttribute_AttributeIsNotEqualExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElement_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElement_SubjectIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElement_ElementIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElement_ElementIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElement_GuardExpectedValue_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElement_GuardExpectedValue_GuardMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElementForEnumerable_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElementForEnumerable_SubjectIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElementForEnumerable_OccurrenceConstraint_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElementForEnumerable_OccurrenceConstraint_FailMessageForma" +
+                        "t", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_HaveElementForEnumerable_GuardExpectedValue_GuardMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_HaveElementForEnumerable_GuardExpectedValue_GuardMessageFormat" +
+                        "", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_NotBe_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_NotBe_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XElementAssertions_Be_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XElementAssertions_Be_FailMessageFormat", resourceCulture);
+            }
+        }
     }
 }
