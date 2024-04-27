@@ -42,8 +42,7 @@ public class AndWhichConstraint<TParentConstraint, TMatchedElement> : AndConstra
                 matchedElements.Select(
                     ele => "\t" + Formatter.ToString(ele)));
 
-            string message = "More than one object found.  FluentAssertions cannot determine which object is meant."
-                + $"  Found objects:{Environment.NewLine}{foundObjects}";
+            string message = string.Format(FluentAssertions.AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat, Environment.NewLine, foundObjects);
 
             Services.ThrowException(message);
         }

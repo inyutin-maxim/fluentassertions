@@ -361,5 +361,11 @@ namespace FluentAssertions {
                         "rmat", resourceCulture);
             }
         }
+        
+        internal static string AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat", resourceCulture);
+            }
+        }
     }
 }

@@ -164,4 +164,7 @@
   <data name="NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
     <value>Невозможно определить приближение double к NaN</value>
   </data>
+  <data name="AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat" xml:space="preserve">
+    <value>Найдено более одного объекта. FluentAssertions не может определить, какой объект имеется в виду. Найдены объекты:{0}{1}</value>
+  </data>
 </root>

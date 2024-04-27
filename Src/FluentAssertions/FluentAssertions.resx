@@ -171,4 +171,7 @@
   <data name="NumericAssertionsOfDouble_NotBeApproximately_ArgumentException_ExceptionMessageFormat" xml:space="preserve">
     <value>Cannot determine approximation of a double to NaN</value>
   </data>
+  <data name="AndWhichConstraint_SingleOrDefault_ExceptionMessageFormat" xml:space="preserve">
+    <value>More than one object found.  FluentAssertions cannot determine which object is meant.  Found objects:{0}{1}</value>
+  </data>
 </root>
