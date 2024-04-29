@@ -215,4 +215,16 @@
   <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat" xml:space="preserve">
     <value>Ожидалось, что {context:subject} будет иметь корневой элемент, содержащий дочерний элемент {0} {expectedOccurrence}{reason}, но было найдено {1}.</value>
   </data>
+  <data name="XAttributeAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context} будет иметь значение {0}{reason}, но было найдено {1}.</value>
+  </data>
+  <data name="XAttributeAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context} не будет иметь значение {0}{reason}.</value>
+  </data>
+  <data name="XAttributeAssertions_HaveValue_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что атрибут будет иметь значение {0}{reason}, но {context:member} имеет значение &lt;null&gt;.</value>
+  </data>
+  <data name="XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context} "{0}" будет иметь значение {1}{reason}, но было найдено {2}.</value>
+  </data>
 </root>

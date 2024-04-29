@@ -473,5 +473,29 @@ namespace FluentAssertions {
                         "essageFormat", resourceCulture);
             }
         }
+        
+        internal static string XAttributeAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XAttributeAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XAttributeAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XAttributeAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XAttributeAssertions_HaveValue_SubjectIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XAttributeAssertions_HaveValue_SubjectIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat", resourceCulture);
+            }
+        }
     }
 }

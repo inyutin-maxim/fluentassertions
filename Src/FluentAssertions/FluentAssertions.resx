@@ -222,4 +222,16 @@
   <data name="XDocumentAssertions_HaveElementForEnumerableOfXElement_OccurrenceConstraint_FailMessageFormat" xml:space="preserve">
     <value>Expected {context:subject} to have a root element containing a child {0} {expectedOccurrence}{reason}, but found it {1}.</value>
   </data>
+  <data name="XAttributeAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context} to be {0}{reason}, but found {1}.</value>
+  </data>
+  <data name="XAttributeAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat" xml:space="preserve">
+    <value>Did not expect {context} to be {0}{reason}.</value>
+  </data>
+  <data name="XAttributeAssertions_HaveValue_SubjectIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected the attribute to have value {0}{reason}, but {context:member} is &lt;null&gt;.</value>
+  </data>
+  <data name="XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context} "{0}" to have value {1}{reason}, but found {2}.</value>
+  </data>
 </root>

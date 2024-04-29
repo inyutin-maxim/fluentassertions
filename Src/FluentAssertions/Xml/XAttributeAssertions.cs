@@ -35,7 +35,7 @@ public class XAttributeAssertions : ReferenceTypeAssertions<XAttribute, XAttribu
         Execute.Assertion
             .ForCondition(Subject?.Name == expected?.Name && Subject?.Value == expected?.Value)
             .BecauseOf(because, becauseArgs)
-            .FailWith("Expected {context} to be {0}{reason}, but found {1}.", expected, Subject);
+            .FailWith(FluentAssertions.XAttributeAssertions_Be_SubjectNotEqualsExpected_FailMessageFormat, expected, Subject);
 
         return new AndConstraint<XAttributeAssertions>(this);
     }
@@ -57,7 +57,7 @@ public class XAttributeAssertions : ReferenceTypeAssertions<XAttribute, XAttribu
         Execute.Assertion
             .ForCondition(!(Subject?.Name == unexpected?.Name && Subject?.Value == unexpected?.Value))
             .BecauseOf(because, becauseArgs)
-            .FailWith("Did not expect {context} to be {0}{reason}.", unexpected);
+            .FailWith(FluentAssertions.XAttributeAssertions_NotBe_SubjectEqualsUneExpected_FailMessageFormat, unexpected);
 
         return new AndConstraint<XAttributeAssertions>(this);
     }
@@ -78,14 +78,14 @@ public class XAttributeAssertions : ReferenceTypeAssertions<XAttribute, XAttribu
         bool success = Execute.Assertion
             .BecauseOf(because, becauseArgs)
             .ForCondition(Subject is not null)
-            .FailWith("Expected the attribute to have value {0}{reason}, but {context:member} is <null>.", expected);
+            .FailWith(FluentAssertions.XAttributeAssertions_HaveValue_SubjectIsNull_FailMessageFormat, expected);
 
         if (success)
         {
             Execute.Assertion
                 .ForCondition(Subject!.Value == expected)
                 .BecauseOf(because, becauseArgs)
-                .FailWith("Expected {context} \"{0}\" to have value {1}{reason}, but found {2}.",
+                .FailWith(FluentAssertions.XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat,
                     Subject.Name, expected, Subject.Value);
         }
 
