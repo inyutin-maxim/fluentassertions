@@ -227,4 +227,43 @@
   <data name="XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
     <value>Ожидалось, что {context} "{0}" будет иметь значение {1}{reason}, но было найдено {2}.</value>
   </data>
+  <data name="XmlReaderValidator_Validate_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} не будет эквивалентны{reason}, но значения равны.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_Content_MessageFormat" xml:space="preserve">
+    <value>содержимое "{0}"</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_SubjectNotEqualExpectation_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {1} в {context:subject} должно быть {0}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_NotSupportedException_ExceptionMessageFormat" xml:space="preserve">
+    <value>{0}, найденный в {1}, не поддерживается для сравнения эквивалентности.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_ExpectationNotEndOfDocument_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {0} в {context:subject}{reason}, но был достигнут конец документа.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_SubjectNotEndOfDocument_FailMessageFormat" xml:space="preserve">
+    <value>Ожидался конец документа в {context:subject}{reason}, но было найдено {0}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_ExpectedAttributeIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что атрибут {0} не был найден в {context:subject} при {1}{reason}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_SubjectAttributeIsNotEqualToExpectedAttribute_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что атрибут {0} в {context:subject} при {1} будет иметь значение {2}{reason}, но было найдено {3}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_SubjectAttributesCountIsNotEqualToExpectedAttributesCount_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что атрибут {0} в {context:subject} при {1}{reason}, но не нашел ни одного.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateStartElement_SubjectLocalNameIsNotEqualToExpectationLocalName_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что локальное имя элемента в {context:subject} при {0} будет иметь значение {1}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateStartElement_SubjectNamespaceUriIsNotEqualToExpectationNamespaceUri_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что пространство имен элемента {0} в {context:subject} при {1} будет иметь значение {2}{reason}, но было найдено {3}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateText_SubjectIsNotEqualToExpectation_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что содержимое должно быть {0} в {context:subject} при {1}{reason}, но было найдено {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAgainstNulls_SubjectAndExpectationIsNotNull_FailMessageFormat" xml:space="preserve">
+    <value>Ожидалось, что {context:subject} будет эквивалентно значению {0}{reason}, но было найдено {1}.</value>
+  </data>
 </root>

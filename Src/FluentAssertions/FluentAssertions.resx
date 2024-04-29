@@ -234,4 +234,43 @@
   <data name="XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat" xml:space="preserve">
     <value>Expected {context} "{0}" to have value {1}{reason}, but found {2}.</value>
   </data>
+  <data name="XmlReaderValidator_Validate_FailMessageFormat" xml:space="preserve">
+    <value>Did not expect {context:subject} to be equivalent{reason}, but it is.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_Content_MessageFormat" xml:space="preserve">
+    <value>content "{0}"</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_SubjectNotEqualExpectation_FailMessageFormat" xml:space="preserve">
+    <value>Expected {1} in {context:subject} at {0}{reason}, but found {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_NotSupportedException_ExceptionMessageFormat" xml:space="preserve">
+    <value>{0} found at {1} is not supported for equivalency comparison.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_ExpectationNotEndOfDocument_FailMessageFormat" xml:space="preserve">
+    <value>Expected {0} in {context:subject}{reason}, but found end of document.</value>
+  </data>
+  <data name="XmlReaderValidator_Validate_SubjectNotEndOfDocument_FailMessageFormat" xml:space="preserve">
+    <value>Expected end of document in {context:subject}{reason}, but found {0}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_ExpectedAttributeIsNull_FailMessageFormat" xml:space="preserve">
+    <value>Did not expect to find attribute {0} in {context:subject} at {1}{reason}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_SubjectAttributeIsNotEqualToExpectedAttribute_FailMessageFormat" xml:space="preserve">
+    <value>Expected attribute {0} in {context:subject} at {1} to have value {2}{reason}, but found {3}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAttributes_SubjectAttributesCountIsNotEqualToExpectedAttributesCount_FailMessageFormat" xml:space="preserve">
+    <value>Expected attribute {0} in {context:subject} at {1}{reason}, but found none.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateStartElement_SubjectLocalNameIsNotEqualToExpectationLocalName_FailMessageFormat" xml:space="preserve">
+    <value>Expected local name of element in {context:subject} at {0} to be {1}{reason}, but found {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateStartElement_SubjectNamespaceUriIsNotEqualToExpectationNamespaceUri_FailMessageFormat" xml:space="preserve">
+    <value>Expected namespace of element {0} in {context:subject} at {1} to be {2}{reason}, but found {3}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateText_SubjectIsNotEqualToExpectation_FailMessageFormat" xml:space="preserve">
+    <value>Expected content to be {0} in {context:subject} at {1}{reason}, but found {2}.</value>
+  </data>
+  <data name="XmlReaderValidator_ValidateAgainstNulls_SubjectAndExpectationIsNotNull_FailMessageFormat" xml:space="preserve">
+    <value>Expected {context:subject} to be equivalent to {0}{reason}, but found {1}.</value>
+  </data>
 </root>

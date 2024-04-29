@@ -497,5 +497,88 @@ namespace FluentAssertions {
                 return ResourceManager.GetString("XAttributeAssertions_HaveValue_SubjectIsNotEqualExpected_FailMessageFormat", resourceCulture);
             }
         }
+        
+        internal static string XmlReaderValidator_Validate_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_Validate_Content_MessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_Content_MessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_Validate_SubjectNotEqualExpectation_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_SubjectNotEqualExpectation_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_Validate_NotSupportedException_ExceptionMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_NotSupportedException_ExceptionMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_Validate_ExpectationNotEndOfDocument_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_ExpectationNotEndOfDocument_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_Validate_SubjectNotEndOfDocument_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_Validate_SubjectNotEndOfDocument_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateAttributes_ExpectedAttributeIsNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateAttributes_ExpectedAttributeIsNull_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateAttributes_SubjectAttributeIsNotEqualToExpectedAttribute_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateAttributes_SubjectAttributeIsNotEqualToExpectedAttribu" +
+                        "te_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateAttributes_SubjectAttributesCountIsNotEqualToExpectedAttributesCount_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateAttributes_SubjectAttributesCountIsNotEqualToExpectedA" +
+                        "ttributesCount_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateStartElement_SubjectLocalNameIsNotEqualToExpectationLocalName_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateStartElement_SubjectLocalNameIsNotEqualToExpectationLo" +
+                        "calName_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateStartElement_SubjectNamespaceUriIsNotEqualToExpectationNamespaceUri_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateStartElement_SubjectNamespaceUriIsNotEqualToExpectatio" +
+                        "nNamespaceUri_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateText_SubjectIsNotEqualToExpectation_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateText_SubjectIsNotEqualToExpectation_FailMessageFormat", resourceCulture);
+            }
+        }
+        
+        internal static string XmlReaderValidator_ValidateAgainstNulls_SubjectAndExpectationIsNotNull_FailMessageFormat {
+            get {
+                return ResourceManager.GetString("XmlReaderValidator_ValidateAgainstNulls_SubjectAndExpectationIsNotNull_FailMessag" +
+                        "eFormat", resourceCulture);
+            }
+        }
     }
 }

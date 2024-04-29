@@ -34,7 +34,7 @@ internal class XmlReaderValidator
 
         if (!shouldBeEquivalent && failure is null)
         {
-            assertion.FailWith("Did not expect {context:subject} to be equivalent{reason}, but it is.");
+            assertion.FailWith(FluentAssertions.XmlReaderValidator_Validate_FailMessageFormat);
         }
     }
 
@@ -62,16 +62,16 @@ internal class XmlReaderValidator
             if (subjectIterator.NodeType != expectationIterator.NodeType)
             {
                 var expectation = expectationIterator.NodeType == XmlNodeType.Text
-                    ? $"content \"{expectationIterator.Value}\""
+                    ? string.Format(FluentAssertions.XmlReaderValidator_Validate_Content_MessageFormat, expectationIterator.Value)
                     : $"{expectationIterator.NodeType} \"{expectationIterator.LocalName}\"";
 
                 var subject = subjectIterator.NodeType == XmlNodeType.Text
-                    ? $"content \"{subjectIterator.Value}\""
+                    ? string.Format(FluentAssertions.XmlReaderValidator_Validate_Content_MessageFormat, subjectIterator.Value)
                     : $"{subjectIterator.NodeType} \"{subjectIterator.LocalName}\"";
 
                 return new Failure(
-                    $"Expected {expectation} in {{context:subject}} at {{0}}{{reason}}, but found {subject}.",
-                    currentNode.GetXPath());
+                    FluentAssertions.XmlReaderValidator_Validate_SubjectNotEqualExpectation_FailMessageFormat,
+                    currentNode.GetXPath(),expectation,subject);
             }
 
 #pragma warning disable IDE0010 // The default case handles the many missing cases
@@ -125,7 +125,8 @@ internal class XmlReaderValidator
 
                 default:
                     throw new NotSupportedException(
-                        $"{expectationIterator.NodeType} found at {currentNode.GetXPath()} is not supported for equivalency comparison.");
+                        string.Format(FluentAssertions.XmlReaderValidator_Validate_NotSupportedException_ExceptionMessageFormat,
+                            expectationIterator.NodeType, currentNode.GetXPath()));
             }
 
             if (failure is not null)
@@ -140,14 +141,14 @@ internal class XmlReaderValidator
         if (!expectationIterator.IsEndOfDocument)
         {
             return new Failure(
-                "Expected {0} in {context:subject}{reason}, but found end of document.",
+                FluentAssertions.XmlReaderValidator_Validate_ExpectationNotEndOfDocument_FailMessageFormat,
                 expectationIterator.LocalName);
         }
 
         if (!subjectIterator.IsEndOfDocument)
         {
             return new Failure(
-                "Expected end of document in {context:subject}{reason}, but found {0}.",
+                FluentAssertions.XmlReaderValidator_Validate_SubjectNotEndOfDocument_FailMessageFormat,
                 subjectIterator.LocalName);
         }
 
@@ -168,14 +169,14 @@ internal class XmlReaderValidator
             if (expectedAttribute is null)
             {
                 return new Failure(
-                    "Did not expect to find attribute {0} in {context:subject} at {1}{reason}.",
+                    FluentAssertions.XmlReaderValidator_ValidateAttributes_ExpectedAttributeIsNull_FailMessageFormat,
                     subjectAttribute.QualifiedName, currentNode.GetXPath());
             }
 
             if (subjectAttribute.Value != expectedAttribute.Value)
             {
                 return new Failure(
-                    "Expected attribute {0} in {context:subject} at {1} to have value {2}{reason}, but found {3}.",
+                    FluentAssertions.XmlReaderValidator_ValidateAttributes_SubjectAttributeIsNotEqualToExpectedAttribute_FailMessageFormat,
                     subjectAttribute.LocalName, currentNode.GetXPath(), expectedAttribute.Value, subjectAttribute.Value);
             }
         }
@@ -188,7 +189,7 @@ internal class XmlReaderValidator
                     && sa.LocalName == ea.LocalName));
 
             return new Failure(
-                "Expected attribute {0} in {context:subject} at {1}{reason}, but found none.",
+                FluentAssertions.XmlReaderValidator_ValidateAttributes_SubjectAttributesCountIsNotEqualToExpectedAttributesCount_FailMessageFormat,
                 missingAttribute.LocalName, currentNode.GetXPath());
         }
 
@@ -200,14 +201,14 @@ internal class XmlReaderValidator
         if (subjectIterator.LocalName != expectationIterator.LocalName)
         {
             return new Failure(
-                "Expected local name of element in {context:subject} at {0} to be {1}{reason}, but found {2}.",
+                FluentAssertions.XmlReaderValidator_ValidateStartElement_SubjectLocalNameIsNotEqualToExpectationLocalName_FailMessageFormat,
                 currentNode.GetXPath(), expectationIterator.LocalName, subjectIterator.LocalName);
         }
 
         if (subjectIterator.NamespaceUri != expectationIterator.NamespaceUri)
         {
             return new Failure(
-                "Expected namespace of element {0} in {context:subject} at {1} to be {2}{reason}, but found {3}.",
+                FluentAssertions.XmlReaderValidator_ValidateStartElement_SubjectNamespaceUriIsNotEqualToExpectationNamespaceUri_FailMessageFormat,
                 subjectIterator.LocalName, currentNode.GetXPath(), expectationIterator.NamespaceUri,
                 subjectIterator.NamespaceUri);
         }
@@ -223,7 +224,7 @@ internal class XmlReaderValidator
         if (subject != expected)
         {
             return new Failure(
-                "Expected content to be {0} in {context:subject} at {1}{reason}, but found {2}.",
+                FluentAssertions.XmlReaderValidator_ValidateText_SubjectIsNotEqualToExpectation_FailMessageFormat,
                 expected, currentNode.GetXPath(), subject);
         }
 
@@ -235,7 +236,7 @@ internal class XmlReaderValidator
         if (expectationReader is null != subjectReader is null)
         {
             return new Failure(
-                "Expected {context:subject} to be equivalent to {0}{reason}, but found {1}.",
+                FluentAssertions.XmlReaderValidator_ValidateAgainstNulls_SubjectAndExpectationIsNotNull_FailMessageFormat,
                 subjectReader, expectationReader);
         }
 
